@@ -1,17 +1,14 @@
 ## Advanced Lane Finding
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-![Lanes Image](./output_images/straight_lines1.jpg)
+<img src="./output_images/straight_lines1.jpg" width="666" alt="Lanes Image" />
 
 [//]: # (Image References)
 
 [image1]: ./readme_images/undistorted_image.png "Undistorted"
-
-[image3]: ./readme_images/test_undistorted.png "Test Undist"
-[image4]: ./readme_images/binary_output.jpg "Binary Output"
-[image5]: ./readme_images/warped_image.png "Warped Image"
-[image6]: ./readme_images/fitting.png "Fit Visual"
-[image7]: ./readme_images/final_result.jpg "Final Output"
+[image2]: ./readme_images/test_undistorted.png "Test Undist"
+[image3]: ./readme_images/warped_image.png "Warped Image"
+[image4]: ./readme_images/fitting.png "Fit Visual"
 
 Overview
 ---
@@ -41,12 +38,13 @@ We need to perform camera calibration to obtain the camera matrix and distorsion
 
 I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result:
 
+
 ![alt text][image1]
 
 Distortion correction
 ---
 We can also take a look at the distortion correction applied to one of the test images like this one:
-![alt text][image3]
+![alt text][image2]
 
 Color & Gradient Threshold
 ---
@@ -63,18 +61,18 @@ Other color thresholds could be used as well as other combinations of threholds 
 
 Here's an example of my output for this step:
 
-![alt text][image4]
+<img src="./readme_images/binary_output.jpg" width="666" />
 
 Perspective Transform
 ---
 
 To obtain a perspective transfrom of an image ("bird-eye" view), four source points are selected in the original image and four destination points where these source points will appear in the warped image are also selected.
 
-Then, we can make use of the`cv2.getPerspectiveTransform` to obtain the perspective transform M as well as the inverse perspective transfrom Minv.
+Then, we can make use of the`cv2.getPerspectiveTransform()` to obtain the perspective transform M as well as the inverse perspective transfrom Minv.
 
 Here is an example:
 
-![alt text][image5]
+![alt text][image3]
 
 Detection of lane pixels & fitting
 ---
@@ -89,7 +87,7 @@ For fitting a polynomial to each lane, I used `poly_coeff()` and `fit_poly()` to
 
 The output looks like this:
 
-![alt text][image6]
+![alt text][image4]
 
 Curvature & Offset calculation
 ---
@@ -111,7 +109,7 @@ Final output
 ---
 Here is an example of the final output on a test image:
 
-![alt text][image7]
+<img src="./readme_images/final_result.jpg" width="666" />
 
 Video processing
 ---
