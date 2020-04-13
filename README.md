@@ -8,7 +8,6 @@
 [image1]: ./readme_images/undistorted_image.png "Undistorted"
 [image2]: ./readme_images/test_undistorted.png "Test Undist"
 [image3]: ./readme_images/warped_image.png "Warped Image"
-[image4]: ./readme_images/fitting.png "Fit Visual"
 
 Overview
 ---
@@ -37,8 +36,6 @@ We need to perform camera calibration to obtain the camera matrix and distorsion
 * Having these object and image points we can then use them in `cv2.calibrateCamera()` function.
 
 I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result:
-
-
 ![alt text][image1]
 
 Distortion correction
@@ -87,7 +84,7 @@ For fitting a polynomial to each lane, I used `poly_coeff()` and `fit_poly()` to
 
 The output looks like this:
 
-![alt text][image4]
+<img src="./readme_images/fitting.png" width="555" />
 
 Curvature & Offset calculation
 ---
